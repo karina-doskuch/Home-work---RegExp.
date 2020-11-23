@@ -58,7 +58,8 @@ var reg = new RegExp('(http:|https:)\\/\\/(?!:\\/\\/)([a-zA-Z0-9-_]+\\.)*[a-zA-Z
 str.match(reg).forEach((item) => str = str.replace(item, `<a href="${item}" target="_blank">${item.replace(/^(http:|https:)\/\//gi, '')}</a>`));
 return str;
 }
-console.log(createLinksFromDomains('http://site.ua 1 https://site.com 2'));
+console.log(createLinksFromDomains('http://site.ua'));
+console.log(createLinksFromDomains('https://site.com '));
 
 
 
